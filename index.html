@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3S2 - Sistema de Gestión de Inventario | JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>M3S2 - Sistema de Gestión de Inventario</h1>
+            <p class="subtitle">Trabajo práctico: Gestión de datos con JavaScript</p>
+        </header>
+        
+        <div class="project-info">
+            <h2>Información del Proyecto</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🎯 Objetivo</h3>
+                    <p>Desarrollar un sistema de gestión de inventario que demuestre el uso de estructuras de datos avanzadas en JavaScript (Maps, Sets, Arrays) y programación modular.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🛠️ Tecnologías</h3>
+                    <ul>
+                        <li>JavaScript ES6+</li>
+                        <li>HTML5 semántico</li>
+                        <li>CSS3 moderno</li>
+                        <li>Estructuras: Map, Set, Object</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>📋 Funcionalidades</h3>
+                    <ul>
+                        <li>Búsqueda por categorías</li>
+                        <li>Gestión de inventario</li>
+                        <li>Validación de duplicados</li>
+                        <li>Interfaz interactiva</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Demostración del Sistema</h2>
+            <div class="instructions">
+                <h3>Instrucciones de Uso:</h3>
+                <ol>
+                    <li>Abre las <strong>Herramientas de Desarrollador</strong> (F12)</li>
+                    <li>Ve a la pestaña <strong>Console</strong></li>
+                    <li>Haz clic en "Iniciar Sistema" para comenzar</li>
+                    <li>Interactúa con el sistema usando las opciones del menú</li>
+                    <li>Prueba las diferentes funcionalidades disponibles</li>
+                </ol>
+            </div>
+
+            <div class="controls">
+                <button onclick="iniciarSistemaZapateria()" class="btn-primary">
+                    🚀 Iniciar Sistema de Gestión
+                </button>
+                <button onclick="detenerSistemaZapateria()" class="btn-danger">
+                    ⏹️ Detener Sistema
+                </button>
+                <button onclick="mostrarEstructurasDatos()" class="btn-info">
+                    📊 Ver Estructuras de Datos
+                </button>
+            </div>
+        </div>
+
+        <div class="technical-specs">
+            <h2>Especificaciones Técnicas</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h4>Estructuras de Datos</h4>
+                    <ul>
+                        <li><code>Map</code>: Categorías por marca</li>
+                        <li><code>Set</code>: Validación de duplicados</li>
+                        <li><code>Object</code>: Inventario principal</li>
+                    </ul>
+                </div>
+                <div class="spec-item">
+                    <h4>Arquitectura</h4>
+                    <ul>
+                        <li>Programación modular</li>
+                        <li>Separación de responsabilidades</li>
+                        <li>Patrón de diseño MVC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>💡 Nota:</strong> Este sistema demuestra el uso efectivo de estructuras de datos en JavaScript y buenas prácticas de programación modular. Todas las interacciones se realizan a través de la consola del navegador.
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        function iniciarSistema() {
+            console.log("=".repeat(60));
+            console.log("🎓 M3S2 - SISTEMA DE GESTIÓN DE INVENTARIO CARGADO");
+            console.log("=".repeat(60));
+            console.log("📚 Trabajo práctico: Gestión de datos con JavaScript");
+            console.log("🔧 Demostrando uso de Maps, Sets y programación modular");
+            console.log("=".repeat(60));
+            console.log("👆 Haz clic en 'Iniciar Sistema de Gestión' para comenzar.");
+            console.log("=".repeat(60));
+        }
+
+        function mostrarEstructurasDatos() {
+            console.clear();
+            console.log("📊 ANÁLISIS DE ESTRUCTURAS DE DATOS");
+            console.log("=".repeat(50));
+            console.log("🗃️  INVENTARIO (Object):", inventario);
+            console.log("🏷️  CATEGORÍAS (Map):", categoriasPorMarca);
+            console.log("✅ NOMBRES ÚNICOS (Set):", Utils.obtenerNombresExistentes());
+            console.log("=".repeat(50));
+        }
+        
+        // Mostrar mensaje de bienvenida al cargar
+        window.onload = function() {
+            iniciarSistema();
+        }
+    </script>
+</body>
+</html>
